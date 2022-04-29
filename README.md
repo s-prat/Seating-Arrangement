@@ -3,12 +3,12 @@
 to develop a program to allocate seats to customers purchasing tickets for a movie theatre.
 Cinnamon Cinemas provided some criteria for how the program should be built.
 
-#Business Requirements
+# Business Requirements
 . The Cinnamon Cinemas Movie Theatre has 15 seats, arranged in 3 rows of 5
 Rows are assigned a letter from A to C
 Seats are assigned a number from 1 to 5
 
-#User Story
+# User Story
 As a Cinnamon Cinemas Movie Theatre Manager
 I want to allocate seats to customers
 So that I can control reserved seating for the theatre
@@ -18,7 +18,7 @@ THEN the customer should be allocated the required number of seats
 from the available seats on the seating plan
 AND the seats should be recorded as allocated
 
-#Acceptance Criteria and Assumptions
+# Acceptance Criteria and Assumptions
 Write a program that allocates seats based on a random integer “number of seats” between 1 and 3
 
 Your program should allocate the required number of seats from the available seats starting from seat A1 and filling the auditorium from
