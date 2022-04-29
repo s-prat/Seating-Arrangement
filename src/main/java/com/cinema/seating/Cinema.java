@@ -11,4 +11,15 @@ public class Cinema {
         this.noOfRows = noOfRows;
     }
 
+    public int getTotalSeatingCapacity() {
+        return totalSeatingCapacity;
+    }
+
+    public int getNoOfRows() {
+        return noOfRows;
+    }
+
+    public int getNoOfColumns() {
+        return noOfColumns;
+    }
 }
