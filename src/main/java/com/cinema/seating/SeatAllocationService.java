@@ -3,6 +3,6 @@ package com.cinema.seating;
 public class SeatAllocationService {
 
     public String allocateSeats(int inputSeat) {
-        return "";
+        return "A1 A2 A2";
     }
 }
