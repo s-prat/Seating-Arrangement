@@ -63,6 +63,11 @@ public class SeatAllocationServiceTest {
     }
 
     @Test
+    public void testAllocateSeatsWithMoreThan3InputSeats() {
+        assertEquals("Please enter input value between 0 and 3", seatAllocationService.allocateSeats(4));
+    }
+
+    @Test
     public void testAvailableSeatWhenEnoughSeatsAreNotAvailable() {
         seatAllocationService.allocateSeats(3);
         seatAllocationService.allocateSeats(3);
