@@ -13,7 +13,9 @@ public class SeatAllocationServiceTest {
 
     @BeforeEach
     public void setUp() {
-        seatAllocationService = new SeatAllocationService();
+        Cinema cinema = new Cinema(15, 3, 5);
+        Ticket ticket = new Ticket(cinema);
+        seatAllocationService = new SeatAllocationService(ticket);
     }
 
     @ParameterizedTest
