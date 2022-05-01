@@ -29,4 +29,12 @@ public class Ticket {
     public HashMap getRowMap() {
         return rowMap;
     }
+
+    public void setCurrentAvailableSeats(int currentAvailableSeats) {
+        this.currentAvailableSeats = currentAvailableSeats;
+    }
+
+    public void setRowMap(HashMap rowMap) {
+        this.rowMap = rowMap;
+    }
 }

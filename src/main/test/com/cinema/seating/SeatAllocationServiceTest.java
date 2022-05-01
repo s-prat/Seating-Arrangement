@@ -19,7 +19,7 @@ public class SeatAllocationServiceTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"3, A1 A2 A3", "2, A1 A2", "1, A1"})
+    @CsvSource({"3, A1A2A3", "2, A1A2", "1, A1"})
     public void testAllocateSeats(int inputSeats, String expected) {
         assertEquals(expected, seatAllocationService.allocateSeats(inputSeats));
     }
@@ -28,14 +28,14 @@ public class SeatAllocationServiceTest {
     public void testAllocateSeatsWithTwoInputRequestsOf3Seats() {
         seatAllocationService.allocateSeats(3);
         String result = seatAllocationService.allocateSeats(3);
-        assertEquals("B1 B2 B3", result);
+        assertEquals("B1B2B3", result);
     }
 
     @Test
     public void testAllocateSeatsWithTwoInputRequestsOfDiffInputSeats() {
         seatAllocationService.allocateSeats(3);
         String result = seatAllocationService.allocateSeats(2);
-        assertEquals("A4 A5", result);
+        assertEquals("A4A5", result);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class SeatAllocationServiceTest {
         seatAllocationService.allocateSeats(3);
         seatAllocationService.allocateSeats(3);
         String result = seatAllocationService.allocateSeats(3);
-        assertEquals("C1 C2 C3", result);
+        assertEquals("C1C2C3", result);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class SeatAllocationServiceTest {
         seatAllocationService.allocateSeats(3);
         seatAllocationService.allocateSeats(3);
         String result = seatAllocationService.allocateSeats(2);
-        assertEquals("A4 A5", result);
+        assertEquals("A4A5", result);
     }
 
     @Test
@@ -59,7 +59,7 @@ public class SeatAllocationServiceTest {
         seatAllocationService.allocateSeats(3);
         seatAllocationService.allocateSeats(1);
         String result = seatAllocationService.allocateSeats(2);
-        assertEquals("B1 B2", result);
+        assertEquals("B1B2", result);
     }
 
     @Test
