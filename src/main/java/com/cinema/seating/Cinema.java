@@ -5,8 +5,8 @@ public class Cinema {
     private int noOfRows;
     private int noOfColumns;
 
-    public Cinema(int totalSeatingCapacity, int noOfRows, int noOfColumns) {
-        this.totalSeatingCapacity = totalSeatingCapacity;
+    public Cinema(int noOfRows, int noOfColumns) {
+        this.totalSeatingCapacity = noOfRows * noOfColumns;
         this.noOfColumns = noOfColumns;
         this.noOfRows = noOfRows;
     }

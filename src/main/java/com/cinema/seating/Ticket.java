@@ -9,7 +9,7 @@ public class Ticket {
 
     public Ticket(Cinema cinemaDetails) {
         currentAvailableSeats = cinemaDetails.getTotalSeatingCapacity();
-
+        //rowMap is used to check which row has how many empty seats
         rowMap = new HashMap<Character, Integer>();
         rowMap.put('A', 5);
         rowMap.put('B', 5);

@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 public class SeatAllocationService {
 
+    private static final String VALID_INPUT_VALUE_MSG = "Please enter input value between 0 and 3";
+    private static final String SEATS_NOT_AVAILABLE_MSG = "Seats are not available. Please try for next show!";
+
     private Ticket ticket;
 
     public SeatAllocationService(Ticket ticket) {
@@ -12,7 +15,7 @@ public class SeatAllocationService {
 
     public String allocateSeats(int inputSeat) {
         if(inputSeat<0 || inputSeat>3) {
-            return "Please enter input value between 0 and 3";
+            return VALID_INPUT_VALUE_MSG;
         } else if(availableSeats(inputSeat)) {
             HashMap rowMap = ticket.getRowMap();
             char rowName;
@@ -25,7 +28,7 @@ public class SeatAllocationService {
             }
             return getSeatsAndUpdateAvailableSeatsInARow(rowMap, rowName, inputSeat);
         } else {
-            return "Seats are not available. Please try for next show!";
+            return SEATS_NOT_AVAILABLE_MSG;
         }
     }
 
